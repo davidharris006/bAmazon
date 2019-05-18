@@ -1,4 +1,5 @@
 var mysql = require("mysql");
+var inquirer = require("inquirer");
 
 var connection = mysql.createConnection({
     host: "localhost",
@@ -37,3 +38,24 @@ function getProducts(){
 }
 
 getProducts();
+
+inquirer
+  .prompt([
+
+    {
+      type: "input",
+      message: "What is the ID of the Item you would like to purchase?",
+      name: "productid"
+    },
+    
+    {
+      type: "input",
+      message: "How many would you like to buy?",
+      name: "quantity"
+    }
+  ])
+  .then(function(res) {
+    connection.query(
+        'SELECT * FROM products WHERE '
+    )
+  });

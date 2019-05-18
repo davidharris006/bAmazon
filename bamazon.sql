@@ -4,6 +4,14 @@ CREATE DATABASE bamazon;
 USE bamazon;
 
 
+CREATE TABLE `bamazon`.`products` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `product_name` VARCHAR(45) NOT NULL,
+  `depatrment_name` VARCHAR(45) NOT NULL,
+  `price` INT NOT NULL,
+  `stock_quantity` INT NOT NULL,
+  PRIMARY KEY (`Id`));
+
 
 INSERT INTO products (product_name, depatrment_name, price, stock_quantity)
 VALUES ("Mirrors", "Home", 55, 100);
@@ -35,4 +43,3 @@ VALUES ("Desk Chair", "Home", 100, 80);
 
 
 SELECT * FROM products;
-
