@@ -1,0 +1,22 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidharris006/bAmazon.git"
+  },
+  "author": "David Harris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidharris006/bAmazon/issues"
+  },
+  "homepage": "https://github.com/davidharris006/bAmazon#readme",
+  "dependencies": {
+    "mysql": "^2.17.1"
+  }
+}

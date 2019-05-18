@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
     host: "localhost",
   
     
-    port: 9889,
+    port: 3306,
   
 
     user: "root",
@@ -20,12 +20,16 @@ var connection = mysql.createConnection({
 function getProducts(){
 
     connection.connect(function(err){
-        if (err) throw err;
+        if (err){
+            console.log(err);
+        };
+        
         console.log('connected');
+        
         connection.query(
-            `'SELECT * FROM products;`,
+            'SELECT * FROM products;',
             function(error,data){
-                console.table(data);
+                console.log(data);
                 connection.end()
             }
         )
